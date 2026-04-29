@@ -7,6 +7,9 @@ APP_PATH = os.path.dirname(os.path.abspath(__file__))
 def get_data_path(filename):
     return os.path.join(APP_PATH, "data", filename)
 
+st.title("F1 Driver & Team Comparison")
+st.markdown("Compare F1 drivers and teams across history")
+
 @st.cache_data
 def load_drivers():
     df = pd.read.csv(get_data_path("drivers.csv"))
