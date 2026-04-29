@@ -20,12 +20,12 @@ def load_drivers():
 
 @st.cache_data
 def load_results():
-    df = pd.read_cvs(get_data_path("results.cvs"))
+    df = pd.read_cvs(get_data_path("results.csv"))
     return df
 
 @st.cache_data
 def load_races():
-    df = pd.read_csv(get_data_path("races.cvs"))
+    df = pd.read_csv(get_data_path("races.csv"))
     return df
 
 drivers = load_drivers()
