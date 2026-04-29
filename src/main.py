@@ -15,7 +15,7 @@ mode = st.sidebar.radio("Compare by", ["Drivers", "Teams"])
 
 @st.cache_data
 def load_drivers():
-    df = pd.read.csv(get_data_path("drivers.csv"))
+    df = pd.read_csv(get_data_path("drivers.csv"))
     return df
 
 @st.cache_data
@@ -24,8 +24,8 @@ def load_results():
     return df
 
 @st.cache_data
-def load_constructor_standing():
-    df = pd.read_csv(get_data_path("constructor_standings.cvs"))
+def load_races():
+    df = pd.read_csv(get_data_path("races.cvs"))
     return df
 
 drivers = load_drivers()
