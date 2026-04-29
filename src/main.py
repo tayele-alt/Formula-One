@@ -31,3 +31,7 @@ def load_races():
 drivers = load_drivers()
 results = load_results()
 races = load_races()
+
+if mode == "Drivers":
+    st.subheader("Drivers Data")
+    st.dataframe(drivers)
