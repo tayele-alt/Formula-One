@@ -12,12 +12,12 @@ def load_drivers():
     df = pd.read.csv(get_data_path("drivers.csv"))
     return df
 
-@st.cache.data
+@st.cache_data
 def load_results():
     df = pd.read_cvs(get_data_path("results.cvs"))
     return df
 
-@st.cache.data
+@st.cache_data
 def load_constructor_standing():
     df = pd.read_csv(get_data_path("constructor_standings.cvs"))
     return df
