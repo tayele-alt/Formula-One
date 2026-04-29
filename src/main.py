@@ -3,4 +3,6 @@ import pandas as pd
 
 
 
-st.set_page_
+st.set_page_config(
+    
+)
