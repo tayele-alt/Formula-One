@@ -33,8 +33,9 @@ results = load_results()
 races = load_races()
 
 if mode == "Drivers":
-    st.subheader("Drivers Data")
+    st.subheader("Select Drivers to Compare")
     st.dataframe(drivers)
 else:
     st.subheader("Constructors Data")
-    st.dataframe(results)
+    driver_name = drivers["forname"] + " " + drivers["surname"]
+    
