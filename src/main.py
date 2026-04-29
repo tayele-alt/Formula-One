@@ -20,7 +20,7 @@ def load_drivers():
 
 @st.cache_data
 def load_results():
-    df = pd.csv(get_data_path("results.csv"))
+    df = pd.read_csv(get_data_path("results.csv"))
     return df
 
 @st.cache_data
