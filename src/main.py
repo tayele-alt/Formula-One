@@ -4,5 +4,5 @@ import pandas as pd
 
 
 st.set_page_config(
-    page
+    page_title
 )
