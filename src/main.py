@@ -27,3 +27,5 @@ def load_results():
 def load_constructor_standing():
     df = pd.read_csv(get_data_path("constructor_standings.cvs"))
     return df
+
+drivers = load_drivers()
