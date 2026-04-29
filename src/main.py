@@ -10,6 +10,9 @@ def get_data_path(filename):
 st.title("F1 Driver & Team Comparison")
 st.markdown("Compare F1 drivers and teams across history")
 
+st.sidebar.header("Settings")
+mode = st.sidebar.radio("Compare by", ["Drivers", "Teams"])
+
 @st.cache_data
 def load_drivers():
     df = pd.read.csv(get_data_path("drivers.csv"))
