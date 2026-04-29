@@ -29,3 +29,5 @@ def load_constructor_standing():
     return df
 
 drivers = load_drivers()
+results = load_results()
+races = load_races()
