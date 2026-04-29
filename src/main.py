@@ -35,3 +35,6 @@ races = load_races()
 if mode == "Drivers":
     st.subheader("Drivers Data")
     st.dataframe(drivers)
+else:
+    st.subheader("Constructors Data")
+    st.dataframe(results)
