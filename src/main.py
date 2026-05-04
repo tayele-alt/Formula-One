@@ -39,7 +39,7 @@ if mode == "Drivers":
 
 
     if selected:
-        st.write("You selected:", selected)
+        ("You selected:", selected)
 
 else:
     st.subheader("Constructors Data")
