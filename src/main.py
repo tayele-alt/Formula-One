@@ -58,7 +58,7 @@ if selected:
         races_entered = len(results[results["driverId"] == driver_Id])
 
         champs = driver_standings[
-            
+            (driver_standings[driverI])
         ]
 
         stats.append({
