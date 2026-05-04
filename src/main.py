@@ -43,5 +43,5 @@ if mode == "Drivers":
 
 else:
     st.subheader("Constructors Data")
-    driver_name = drivers["forname"] + " " + drivers["surname"]
+    driver_name = drivers["forename"] + " " + drivers["surname"]
     selected = st.multiselect("Pick up to 4 drivers:", driver_name, max_selections=4)
