@@ -38,6 +38,12 @@ if mode == "Drivers":
     selected = st.multiselect("Pick up to 4 drivers:", driver_name, max_selections=4)
 
 
+    if selected:
+        driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
+        st.subheader("Wins Comparison")
+        chart_data = pd.DataFrame(stats)
+        st.bar_chart(chart_data.set_index("Driver")["Wins"])
+
 else:
     st.subheader("Constructors Data")
     st.dataframe(drivers)
