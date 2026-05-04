@@ -54,6 +54,12 @@ for name in selected:
     driver_Id = driver["driverId"].values[0]
 
     wins = results[results["driverId"] == driver_Id]["winds"].sum()
-    races_entered = len(resuls[results["driverId"] == driver])
+    races_entered = len([results["driverId"] == driver_Id])
+
+    stats.append({
+        "Driver": name,
+        "races": races_entered,
+        "Wins": wins
+    })
 
 st.dataframe(pd.DataFrame(stats))
