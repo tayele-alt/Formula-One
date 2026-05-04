@@ -44,3 +44,5 @@ if mode == "Drivers":
 else:
     st.subheader("Constructors Data")
     st.dataframe(drivers)
+
+driver_standings = pd.read_csv
