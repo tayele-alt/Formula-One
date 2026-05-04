@@ -47,7 +47,7 @@ else:
 if selected:
     stats = []
     for name in selected:
-        
+        driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
         first, last = name.split(" ", 1)
         driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
         driver_Id = driver["driverId"].values[0]
@@ -61,9 +61,7 @@ if selected:
             "Wins": wins
         })
     
-        driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
+        st.dataframe(pd.DataFrame(stats))
         st.subheader("Wins Comparison")
         chart_data = pd.DataFrame(stats)
         st.bar_chart(chart_data.set_index("Driver")["Wins"])
-
-    st.dataframe(pd.DataFrame(stats))
