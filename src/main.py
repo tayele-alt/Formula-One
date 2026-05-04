@@ -35,10 +35,12 @@ races = load_races()
 if mode == "Drivers":
     st.subheader("Select Drivers to Compare")
     st.dataframe(drivers)
+
+
+    if selected:
+        st.write("You selected:", selected)
+
 else:
     st.subheader("Constructors Data")
     driver_name = drivers["forname"] + " " + drivers["surname"]
     selected = st.multiselect("Pick up to 4 drivers:", driver_name, max_selections=4)
-
-    if selected:
-        st.write("You selected:", selected)
