@@ -42,7 +42,7 @@ if mode == "Drivers":
         driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
         st.subheader("Wins Comparison")
         chart_data = pd.DataFrame(stats)
-        st.bar
+        st.bar_chart()
 
 else:
     st.subheader("Constructors Data")
