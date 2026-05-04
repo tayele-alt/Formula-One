@@ -57,11 +57,13 @@ if selected:
         wins = len(results[(results["driverId"] == driver_Id) & (results["position"] == "1")])
         races_entered = len(results[results["driverId"] == driver_Id])
 
+        champs = driver
+
         stats.append({
             "Driver": name,
             "races": races_entered,
             "Wins": wins,
-            "Championships":
+            "Championships": champs
         })
     
     st.dataframe(pd.DataFrame(stats))
