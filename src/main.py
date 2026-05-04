@@ -45,9 +45,10 @@ else:
     st.dataframe(drivers)
 
 if selected:
+    
     stats = []
     for name in selected:
-        driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
+        
         first, last = name.split(" ", 1)
         driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
         driver_Id = driver["driverId"].values[0]
