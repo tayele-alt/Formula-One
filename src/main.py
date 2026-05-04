@@ -46,7 +46,7 @@ else:
 
 if selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
-    
+
     stats = []
     for name in selected:
         
@@ -60,7 +60,8 @@ if selected:
         stats.append({
             "Driver": name,
             "races": races_entered,
-            "Wins": wins
+            "Wins": wins,
+            "Championships":
         })
     
     st.dataframe(pd.DataFrame(stats))
