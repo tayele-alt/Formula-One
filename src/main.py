@@ -61,7 +61,7 @@ if selected:
             "Wins": wins
         })
     
-        st.dataframe(pd.DataFrame(stats))
-        st.subheader("Wins Comparison")
-        chart_data = pd.DataFrame(stats)
-        st.bar_chart(chart_data.set_index("Driver")["Wins"])
+    st.dataframe(pd.DataFrame(stats))
+    st.subheader("Wins Comparison")
+    chart_data = pd.DataFrame(stats)
+    st.bar_chart(chart_data.set_index("Driver")["Wins"])
