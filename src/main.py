@@ -57,17 +57,19 @@ if selected:
         wins = len(results[(results["driverId"] == driver_Id) & (results["position"] == "1")])
         races_entered = len(results[results["driverId"] == driver_Id])
 
-        champs = driver_standings[
-            (driver_standings["driverId"] == driver_Id) & 
-            (driver_standings["position"] == 1)
-        ]["raceId"].count()
+        champs = races[races["raceID"].isin(
+            driver_standings[
+                (driver_standings["driverId"] == driver_Id) & 
+                (driver_standings["position"] == 1)
+            ]["raceId"]
+        )]["years"].nunique()
 
         stats.append({
-            "Driver": name,
-            "races": races_entered,
-            "Wins": wins,
-            "Championships": champs
-        })
+                "Driver": name,
+                "races": races_entered,
+                "Wins": wins,
+                "Championships": champs
+            })
     
     st.dataframe(pd.DataFrame(stats))
     st.subheader("Wins Comparison")
