@@ -38,30 +38,24 @@ if mode == "Drivers":
     selected = st.multiselect("Pick up to 4 drivers:", driver_name, max_selections=4)
 
 
-    if selected:
-        driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
-        st.subheader("Wins Comparison")
-        chart_data = pd.DataFrame(stats)
-        st.bar_chart(chart_data.set_index("Driver")["Wins"])
-
 else:
     st.subheader("Constructors Data")
     st.dataframe(drivers)
 
+if selected:
+    stats = []
+    for name in selected:
+        first, last = name.split(" ", 1)
+        driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
+        driver_Id = driver["driverId"].values[0]
 
+        wins = len(results[(results["driverId"] == driver_Id) & (results["position"] == "1")])
+        races_entered = len(results[results["driverId"] == driver_Id])
 
-for name in selected:
-    first, last = name.split(" ", 1)
-    driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
-    driver_Id = driver["driverId"].values[0]
+        stats.append({
+            "Driver": name,
+            "races": races_entered,
+            "Wins": wins
+        })
 
-    wins = len(results[(results["driverId"] == driver_Id) & (results["position"] == "1")])
-    races_entered = len(results[results["driverId"] == driver_Id])
-
-    stats.append({
-        "Driver": name,
-        "races": races_entered,
-        "Wins": wins
-    })
-
-st.dataframe(pd.DataFrame(stats))
+    st.dataframe(pd.DataFrame(stats))
