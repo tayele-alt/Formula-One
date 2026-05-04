@@ -59,6 +59,10 @@ if selected:
             "races": races_entered,
             "Wins": wins
         })
-        
+    
+        driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
+        st.subheader("Wins Comparison")
+        chart_data = pd.DataFrame(stats)
+        st.bar_chart(chart_data.set_index("Driver")["Wins"])
 
     st.dataframe(pd.DataFrame(stats))
