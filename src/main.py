@@ -45,7 +45,6 @@ else:
     st.subheader("Constructors Data")
     st.dataframe(drivers)
 
-driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
 
 stats = []
 for name in selected:
