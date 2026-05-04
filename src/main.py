@@ -59,7 +59,7 @@ if selected:
 
         champs = driver_standings[
             (driver_standings["driverId"] == driver_Id) & 
-            (driver_standings["position"])
+            (driver_standings["position"] == 1)
         ]
 
         stats.append({
