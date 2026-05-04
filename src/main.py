@@ -62,7 +62,7 @@ if selected:
                 (driver_standings["driverId"] == driver_Id) & 
                 (driver_standings["position"] == 1)
             ]["raceId"]
-        )]["years"].nunique()
+        )]["year"].nunique()
 
         stats.append({
             "Driver": name,
