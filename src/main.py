@@ -53,7 +53,7 @@ for name in selected:
     driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
     driver_Id = driver["driverId"].values[0]
 
-    wins = len(results[results["driverId"] == driver_Id])["winds"].sum()
+    wins = results[results["driverId"] == driver_Id]["winds"].sum()
     races_entered = len(results[results["driverId"] == driver_Id])
 
     stats.append({
