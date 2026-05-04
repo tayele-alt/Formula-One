@@ -65,11 +65,11 @@ if selected:
         )]["years"].nunique()
 
         stats.append({
-                "Driver": name,
-                "races": races_entered,
-                "Wins": wins,
-                "Championships": champs
-            })
+            "Driver": name,
+            "races": races_entered,
+            "Wins": wins,
+            "Championships": champs
+        })
     
     st.dataframe(pd.DataFrame(stats))
     st.subheader("Wins Comparison")
