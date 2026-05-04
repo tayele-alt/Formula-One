@@ -34,6 +34,7 @@ races = load_races()
 
 if mode == "Drivers":
     st.subheader("Select Drivers to Compare")
+    driver_name = drivers["forename"]
     st.dataframe(drivers)
 
 
