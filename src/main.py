@@ -45,4 +45,15 @@ else:
     st.subheader("Constructors Data")
     st.dataframe(drivers)
 
-driver_standings = pd.read_csv
+driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
+
+stats = []
+for name in selected:
+    first, last = name.split(" ", 1)
+    driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
+    driver_Id = driver["driverId"].values[0]
+
+    wins = results[results["driverId"] == driver_Id]["winds"].sum()
+    races_entered = len(resuls[results["driverId"] == driver])
+
+st.dataframe(pd.DataFrame(stats))
