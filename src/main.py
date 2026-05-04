@@ -40,7 +40,7 @@ if mode == "Drivers":
 
     if selected:
         driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
-        st
+        st.subheader
 
 else:
     st.subheader("Constructors Data")
