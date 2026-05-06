@@ -47,7 +47,8 @@ else:
     team_names = constructors["name"].tolist()
     selected_team = st.multiselect("Pick up to 4 teams:", team_names, max_selections=4)
 
-    
+    if selected_teams:
+        
 
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
