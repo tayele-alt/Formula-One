@@ -43,7 +43,7 @@ if mode == "Drivers":
 else:
     st.subheader("Select Teams to Compare")
 
-    c
+    constructors = pd.read_
     st.dataframe(drivers)
 
 if selected:
