@@ -57,7 +57,9 @@ else:
 
             team_wins = len(results[results["constructorId"] == constructor_id])
 
-            team_stats.append
+            team_stats.append({
+                "Teams"
+            })
 
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
