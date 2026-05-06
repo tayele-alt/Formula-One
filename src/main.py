@@ -59,7 +59,7 @@ else:
 
             team_stats.append({
                 "Teams": team,
-                "Races": team
+                "Races": team_wins,
             })
 
 if mode == "Drivers" and selected:
