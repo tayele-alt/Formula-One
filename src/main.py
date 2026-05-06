@@ -45,13 +45,13 @@ else:
 
     constructors = pd.read_csv(get_data_path("constructors.csv"))
     team_names = constructors["name"].tolist()
-    selected_team = st.multiselect("Pick up to 4 teams:", team_names, max_selections=4)
+    selected_teams = st.multiselect("Pick up to 4 teams:", team_names, max_selections=4)
 
-    if selected_team:
+    if selected_teams:
         constructors_standings = pd.read_csv(get_data_path("consructor_standings.csv"))
 
         team_stats = []
-        for team in selected_team:
+        for team in selected_teams:
             constructor = constructors[constructors["name"] == team]
             constructor_id = constructor["constructorId"].values[0]
 
