@@ -54,6 +54,7 @@ else:
         for team in selected_teams:
             constructor = constructors[constructors["name"] == team]
             constructor_id = constructor["constructorId"].values[0]
+            
 
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
