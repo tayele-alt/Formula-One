@@ -50,7 +50,8 @@ else:
     if selected_teams:
         constructors_standings = pd.read_csv(get_data_path("consructor_standings.csv"))
 
-        team
+        team_stats = []
+        
 
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
