@@ -58,12 +58,11 @@ if selected:
         races_entered = len(results[results["driverId"] == driver_Id])
 
         last_races = races.groupby("year")["racedId"].max()
-        champs = races[races["raceId"].isin(
-            driver_standings[
+        champs = driver_standings[
                 (driver_standings["driverId"] == driver_Id) & 
-                (driver_standings["position"] == 1)
-            ]["raceId"]
-        )]["year"].nunique()
+                (driver_standings["position"] == 1) &
+                (driver_standings["raceId"].isin(last_races))
+            ]["raceId"].count
 
         stats.append({
             "Driver": name,
