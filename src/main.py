@@ -58,7 +58,8 @@ else:
             team_wins = len(results[results["constructorId"] == constructor_id])
 
             team_stats.append({
-                "Teams"
+                "Teams": team,
+                "Races": team
             })
 
 if mode == "Drivers" and selected:
