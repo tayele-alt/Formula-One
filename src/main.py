@@ -62,7 +62,7 @@ if selected:
                 (driver_standings["driverId"] == driver_Id) & 
                 (driver_standings["position"] == 1) &
                 (driver_standings["raceId"].isin(last_races))
-            ]["raceId"].count
+            ]["raceId"].count()
 
         stats.append({
             "Driver": name,
