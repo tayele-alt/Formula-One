@@ -41,7 +41,7 @@ if mode == "Drivers":
 
 
 else:
-    st.subheader("Constructors Data")
+    st.subheader("Select Teams to Compare")
     st.dataframe(drivers)
 
 if selected:
