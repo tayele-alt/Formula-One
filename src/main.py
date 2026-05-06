@@ -43,7 +43,7 @@ if mode == "Drivers":
 else:
     st.subheader("Select Teams to Compare")
 
-    constructors = pd.read_csv(get_data_path)
+    constructors = pd.read_csv(get_data_path("constructors.csv"))
     st.dataframe(drivers)
 
 if selected:
