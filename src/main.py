@@ -60,7 +60,8 @@ else:
 
             team_stats.append({
                 "Teams": team,
-                "Races": team_wins,
+                "Races": team_races,
+                "Wins"
             })
         st.dataframe(pd.DataFrame(team_stats))
 
