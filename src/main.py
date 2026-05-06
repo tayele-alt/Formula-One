@@ -44,7 +44,7 @@ else:
     st.subheader("Select Teams to Compare")
 
     constructors = pd.read_csv(get_data_path("constructors.csv"))
-    team_
+    team_names = constructors
 
 if selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
