@@ -57,6 +57,7 @@ if selected:
         wins = len(results[(results["driverId"] == driver_Id) & (results["position"] == "1")])
         races_entered = len(results[results["driverId"] == driver_Id])
 
+        c
         champs = races[races["raceId"].isin(
             driver_standings[
                 (driver_standings["driverId"] == driver_Id) & 
