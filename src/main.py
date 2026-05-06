@@ -57,6 +57,8 @@ else:
 
             team_wins = len(results[results["constructorId"] == constructor_id])
 
+            team_stats
+
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
 
