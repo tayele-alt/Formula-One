@@ -45,6 +45,7 @@ else:
 
     constructors = pd.read_csv(get_data_path("constructors.csv"))
     team_names = constructors["name"].tolist()
+    selected_team = st
 
 if selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
