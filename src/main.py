@@ -55,7 +55,7 @@ else:
             constructor = constructors[constructors["name"] == team]
             constructor_id = constructor["constructorId"].values[0]
 
-            team_races = len(results[results["constructorId"] == cons])
+            team_races = len(results[results["constructorId"] == constructor_id])
             team_wins = len(results[(results["constructorId"] == constructor_id) & (results["posotion"] == "1")])
 
             team_stats.append({
