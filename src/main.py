@@ -61,6 +61,7 @@ else:
                 "Teams": team,
                 "Races": team_wins,
             })
+            
 
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
