@@ -30,7 +30,7 @@ def load_races():
     return df
 
 def load_saved_comparisons():
-    path = get_data_path("")
+    path = get_data_path("saved_comparisons.json")
 
 drivers = load_drivers()
 results = load_results()
