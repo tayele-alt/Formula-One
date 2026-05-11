@@ -116,4 +116,4 @@ if mode == "Drivers" and selected:
         driver_Id = driver["driverId"].values[0]
 
         driver_races = results[results["driverId"] == driver_Id]
-        merged = driver_races.merge(races[["racedId", "year" ]])
+        merged = driver_races.merge(races[["racedId", "year" ]], on = "rac")
