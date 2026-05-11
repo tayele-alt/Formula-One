@@ -89,9 +89,9 @@ else:
             })
         st.dataframe(pd.DataFrame(team_stats))
 
-    st.sidebar.subheader("Load Comparison")
-    saved = load_saved_comparisons()
-    if saved:
+st.sidebar.subheader("Load Comparison")
+saved = load_saved_comparisons()
+if saved:
         load_name = st.sidebar.selectbox("Pick a saved comparison:", list(saved.keys()))
         if st.sidebar.button("Load"):
             loaded = saved[load_name]
