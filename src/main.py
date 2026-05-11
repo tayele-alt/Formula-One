@@ -141,4 +141,4 @@ if mode == "Drivers" and selected:
     if st.button("Save"):
         if save_name:
             save_comparison(save_name, mode, selected)
-            st.success("Saved")
+            st.success("Saved!")
