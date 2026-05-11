@@ -53,8 +53,6 @@ if mode == "Drivers":
     selected = st.multiselect("Pick up to 4 drivers:", driver_name, max_selections=4)
 
 
-
-
 else:
     st.subheader("Select Teams to Compare")
 
