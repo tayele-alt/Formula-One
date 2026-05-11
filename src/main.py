@@ -108,4 +108,4 @@ if mode == "Drivers" and selected:
     chart_data = pd.DataFrame(stats)
     st.bar_chart(chart_data.set_index("Driver")["Wins"])
 
-    s
+    st.subheader()
