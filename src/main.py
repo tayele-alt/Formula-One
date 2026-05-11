@@ -116,4 +116,4 @@ if mode == "Drivers" and selected:
         driver_Id = driver["driverId"].values[0]
 
         driver_races = results[results["driverId"] == driver_Id]
-        
+        merged
