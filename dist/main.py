@@ -59,7 +59,7 @@ else:
 
     constructors = pd.read_csv(get_data_path("constructors.csv"))
     team_names = constructors["name"].tolist()
-    selected_teams = st.multiselect("Pick up to 4 teams:", team_names, default ,max_selections=4)
+    selected_teams = st.multiselect("Pick up to 4 teams:", team_names, default=default_teams ,max_selections=4)
 
     if selected_teams:
         constructor_standings = pd.read_csv(get_data_path("constructor_standings.csv"))
