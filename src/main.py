@@ -95,6 +95,7 @@ else:
         load_name = st.sidebar.selectbox("Pick a saved comparison:", list(saved.keys()))
         if st.sidebar.button("Load"):
             loaded = saved[load_name]
+            st.sidebar
 
 if mode == "Drivers" and selected:
     driver_standings = pd.read_csv(get_data_path("driver_standings.csv"))
