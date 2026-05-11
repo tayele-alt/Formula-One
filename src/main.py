@@ -29,6 +29,9 @@ def load_races():
     df = pd.read_csv(get_data_path("races.csv"))
     return df
 
+def load_saved_comparisons():
+    path
+
 drivers = load_drivers()
 results = load_results()
 races = load_races()
