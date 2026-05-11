@@ -34,7 +34,9 @@ def load_saved_comparisons():
     if os.path.exists(path):
         with open(path, "r") as f:
             return json.load(f)
-        
+    return{}
+
+
 
 drivers = load_drivers()
 results = load_results()
