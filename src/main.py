@@ -62,7 +62,7 @@ else:
             team_champs = constructor_standings[
                 (constructor_standings["constructor_id"] == constructor_id) &
                 (constructor_standings["position"] == 1) &
-                (constructor_standings[raceId].isin(last))
+                (constructor_standings["raceId"].isin(last_races))
             ]
 
             team_stats.append({
