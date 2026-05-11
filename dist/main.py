@@ -83,7 +83,7 @@ else:
             ]["raceId"].count()
 
             team_stats.append({
-                "Teams": team,
+                "Team": team,
                 "Races": team_races,
                 "Wins": team_wins,
                 "Championships": team_champs
