@@ -99,6 +99,7 @@ else:
         if st.button("Save"):
             if save_name:
                 save_comparison(save_name, mode, selected_teams)
+                st.success("Saved!")
 
 st.sidebar.subheader("Load Comparison")
 saved = load_saved_comparisons()
