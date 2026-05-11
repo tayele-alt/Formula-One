@@ -96,6 +96,7 @@ if saved:
     load_name = st.sidebar.selectbox("Pick a saved comparison:", list(saved.keys()))
     if st.sidebar.button("Load"):
         loaded = saved[load_name]
+        st.se
         st.sidebar.success("loaded: " + load_name)
 
 if mode == "Drivers" and selected:
