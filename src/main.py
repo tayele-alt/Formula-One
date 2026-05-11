@@ -115,4 +115,5 @@ if mode == "Drivers" and selected:
         driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
         driver_Id = driver["driverId"].values[0]
 
-        driver_races = results[results["driverId"]]
+        driver_races = results[results["driverId"] == driver_Id]
+        
