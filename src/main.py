@@ -121,3 +121,4 @@ if mode == "Drivers" and selected:
         wins_per_season.append(season_wins.rename(name))
 
     season_df = pd.contact(wins_per_season, axis=1).fillna(0)
+    st.line_chart(season_df)
