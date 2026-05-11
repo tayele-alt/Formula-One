@@ -69,7 +69,7 @@ else:
                 "Teams": team,
                 "Races": team_races,
                 "Wins": team_wins,
-                "Championships": team
+                "Championships": team_champs
             })
         st.dataframe(pd.DataFrame(team_stats))
 
