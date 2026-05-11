@@ -109,4 +109,4 @@ if mode == "Drivers" and selected:
     st.bar_chart(chart_data.set_index("Driver")["Wins"])
 
     st.subheader("Wins Per Season")
-    wins_
+    wins_per_season = []
