@@ -90,6 +90,8 @@ else:
             })
         st.dataframe(pd.DataFrame(team_stats))
 
+        st.subheader
+
 st.sidebar.subheader("Load Comparison")
 saved = load_saved_comparisons()
 if saved:
