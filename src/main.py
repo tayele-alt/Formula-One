@@ -59,7 +59,7 @@ else:
             team_wins = len(results[(results["constructorId"] == constructor_id) & (results["position"] == "1")])
 
             last_races = races.groupby("year")["raceId"].max()
-            
+            team
 
             team_stats.append({
                 "Teams": team,
