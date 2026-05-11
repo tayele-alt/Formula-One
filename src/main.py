@@ -145,7 +145,7 @@ if mode == "Drivers" and selected:
     st.line_chart(season_df)
 
     st.subheader("Save This Comparison")
-    save_name = st.text_imput("Name this comparison:")
+    save_name = st.text_input("Name this comparison:")
     if st.button("Save"):
         if save_name:
             save_comparison(save_name, mode, selected)
