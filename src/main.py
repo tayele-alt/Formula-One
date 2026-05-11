@@ -116,7 +116,7 @@ if mode == "Drivers" and selected:
         driver_Id = driver["driverId"].values[0]
 
         driver_races = results[results["driverId"] == driver_Id]
-        merged = driver_races.merge(races[["racedId", "year" ]], on="raceId")
+        merged = driver_races.merge(races[["raceId", "year" ]], on="raceId")
         season_wins = merged[merged["position"] == "1"].groupby("year").size()
         wins_per_season.append(season_wins.rename(name))
 
