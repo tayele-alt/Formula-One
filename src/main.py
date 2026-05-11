@@ -58,6 +58,8 @@ else:
             team_races = len(results[results["constructorId"] == constructor_id])
             team_wins = len(results[(results["constructorId"] == constructor_id) & (results["position"] == "1")])
 
+            
+
             team_stats.append({
                 "Teams": team,
                 "Races": team_races,
