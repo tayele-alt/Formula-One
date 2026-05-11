@@ -112,4 +112,5 @@ if mode == "Drivers" and selected:
     wins_per_season = []
     for name in selected:
         first, last = name.split(" ", 1)
-        driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == lasst)]
+        driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
+        driver_Id
