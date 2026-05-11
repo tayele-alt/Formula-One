@@ -92,6 +92,7 @@ else:
 
         st.subheader("Wins Comparison")
         team_chart = pd.DataFrame(team_stats)
+        st.bar_chart()
 
 st.sidebar.subheader("Load Comparison")
 saved = load_saved_comparisons()
