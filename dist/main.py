@@ -95,7 +95,10 @@ else:
         st.bar_chart(team_chart.set_index("Team")["Wins"])
 
         st.subheader("Save This Comparison")
-        save_name = st.text_input("Name t")
+        save_name = st.text_input("Name this comparison:")
+        if st.button("Save"):
+            if save_name:
+                
 
 st.sidebar.subheader("Load Comparison")
 saved = load_saved_comparisons()
