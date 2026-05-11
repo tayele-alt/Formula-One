@@ -27,4 +27,4 @@ streamlit run dist/main.py
 Formula 1 World Championship Dataset from Kaggle
 
 ## AI Usage
-AI (Claude) was used to help debug errors and suggest fixes. All code was written and understood by the developer.
+AI was used to help debug errors and suggest fixes. All code was written and understood by the developer.
