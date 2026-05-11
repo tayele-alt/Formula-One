@@ -63,7 +63,7 @@ else:
                 (constructor_standings["constructor_id"] == constructor_id) &
                 (constructor_standings["position"] == 1) &
                 (constructor_standings["raceId"].isin(last_races))
-            ]["race"]
+            ]["raceId"].count()
 
             team_stats.append({
                 "Teams": team,
