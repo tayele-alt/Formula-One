@@ -112,4 +112,4 @@ if mode == "Drivers" and selected:
     wins_per_season = []
     for name in selected:
         first, last = name.split(" ", 1)
-        driver = drivers
+        driver = drivers[(drivers[""])]
