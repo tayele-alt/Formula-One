@@ -98,7 +98,7 @@ else:
         save_name = st.text_input("Name this comparison:")
         if st.button("Save"):
             if save_name:
-                save_comparison(save)
+                save_comparison(save_name, mode, selected_teams)
 
 st.sidebar.subheader("Load Comparison")
 saved = load_saved_comparisons()
