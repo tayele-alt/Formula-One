@@ -110,3 +110,5 @@ if mode == "Drivers" and selected:
 
     st.subheader("Wins Per Season")
     wins_per_season = []
+    for name in selected:
+        first
