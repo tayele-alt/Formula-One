@@ -94,6 +94,8 @@ else:
         team_chart = pd.DataFrame(team_stats)
         st.bar_chart(team_chart.set_index("Team")["Wins"])
 
+        st
+
 st.sidebar.subheader("Load Comparison")
 saved = load_saved_comparisons()
 if saved:
