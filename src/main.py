@@ -51,7 +51,7 @@ if mode == "Drivers":
     st.subheader("Select Drivers to Compare")
     default = st.session_state.get("loaded_selection", [])
     driver_name = drivers["forename"] + " " + drivers["surname"]
-    selected = st.multiselect("Pick up to 4 drivers:", driver_name, default=def , max_selections=4)
+    selected = st.multiselect("Pick up to 4 drivers:", driver_name, default=default , max_selections=4)
 
 
 else:
