@@ -49,7 +49,7 @@ races = load_races()
 
 if mode == "Drivers":
     st.subheader("Select Drivers to Compare")
-    default = st
+    default = st.session_stats.get()
     driver_name = drivers["forename"] + " " + drivers["surname"]
     selected = st.multiselect("Pick up to 4 drivers:", driver_name, max_selections=4)
 
