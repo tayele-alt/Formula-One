@@ -37,7 +37,8 @@ def load_saved_comparisons():
     return{}
 
 def save_comparison(name, mode, selection):
-    path = get_data_path("saved")
+    path = get_data_path("saved_comparisons.json")
+    comparisons
 
 drivers = load_drivers()
 results = load_results()
