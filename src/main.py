@@ -36,7 +36,8 @@ def load_saved_comparisons():
             return json.load(f)
     return{}
 
-
+def save_comparison(name, mode, selection):
+    path = 
 
 drivers = load_drivers()
 results = load_results()
