@@ -120,4 +120,4 @@ if mode == "Drivers" and selected:
         season_wins = merged[merged["position"] == "1"].groupby("year").size()
         wins_per_season.append(season_wins.rename(name))
 
-    
+    season_df
