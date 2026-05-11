@@ -136,4 +136,5 @@ if mode == "Drivers" and selected:
     season_df = pd.concat(wins_per_season, axis=1).fillna(0)
     st.line_chart(season_df)
 
-    st.subheader
+    st.subheader("Save This Comparison")
+    save
