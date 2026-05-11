@@ -140,4 +140,5 @@ if mode == "Drivers" and selected:
     save_name = st.text_imput("Name this comparison:")
     if st.button("Save"):
         if save_name:
-            save_comparison(save_name, mode)
+            save_comparison(save_name, mode, selected)
+            st.success("Saved")
