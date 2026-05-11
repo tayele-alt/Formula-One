@@ -114,3 +114,5 @@ if mode == "Drivers" and selected:
         first, last = name.split(" ", 1)
         driver = drivers[(drivers["forename"] == first) & (drivers["surname"] == last)]
         driver_Id = driver["driverId"].values[0]
+
+        driver_race
