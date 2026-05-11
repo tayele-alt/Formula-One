@@ -117,4 +117,4 @@ if mode == "Drivers" and selected:
 
         driver_races = results[results["driverId"] == driver_Id]
         merged = driver_races.merge(races[["racedId", "year" ]], on="raceId")
-        season
+        season_wins = merged[mer]
